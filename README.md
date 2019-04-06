@@ -5,6 +5,7 @@ Certifique-se de possuir o Git instalado.
 ```
 git clone https://github.com/m4rciosouza/webservice-soap-spring-servidor.git
 cd webservice-soap-spring-servidor
+./mvnw clean install -DskipTests
 ./mvnw spring-boot:run
 Acesse o endpoint contendo o arquivo WSDL através da url http://localhost:8080/ws
 ```
