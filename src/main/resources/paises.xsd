@@ -1,0 +1,38 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://exemplo.com/wsdlservidor/assets"
+           targetNamespace="http://exemplo.com/wsdlservidor/assets"
+           elementFormDefault="qualified">
+
+    <xs:element name="getPaisRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPaisResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pais" type="tns:pais"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="pais">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="populacao" type="xs:int"/>
+            <xs:element name="capital" type="xs:string"/>
+            <xs:element name="moeda" type="tns:moeda"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="moeda">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GBP"/>
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="BRL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

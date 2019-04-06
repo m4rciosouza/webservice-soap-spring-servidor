@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://exemplo.com/wsdlservidor/assets">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getPaisRequest>
+            <gs:nome>Brasil</gs:nome>
+        </gs:getPaisRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
